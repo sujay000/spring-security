@@ -27,7 +27,7 @@ public class UserSecurity {
         .authorizeRequests(authz -> authz
                 .anyRequest().authenticated()
         )
-        .formLogin(withDefaults());
+        .httpBasic(withDefaults());
         return http.build();
     }
 
